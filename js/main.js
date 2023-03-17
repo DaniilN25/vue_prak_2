@@ -80,7 +80,16 @@ Vue.component('product', {
       <div class="note-tabs">
            <h2>One tab</h2>
            <p v-if="!reviews.length">There are no reviews yet.</p>
-
+           <ul>
+             <li v-for="review in reviews">
+             <p>{{ review.review }}</p>
+             <p>{{ review.name }}</p>
+             <p>{{ review.name }}</p>
+             <p>{{ review.name }}</p>
+             <p>{{ review.name }}</p>
+             <p>{{ review.name }}</p>
+             </li>
+           </ul>
           </div> <product-review @review-submitted="addReview"></product-review>
       </div>
 `,
@@ -113,3 +122,4 @@ let app = new Vue({
       }
   }
 })
+
